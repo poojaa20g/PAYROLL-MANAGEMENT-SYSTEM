@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+	<title>PAYROLL</title>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+#head1{
+    background-color: rgb(225, 219, 219);;
+}
+#left{
+    display: grid;
+    float:left;
+    height: 800px;
+    width: 750px;
+    border: 3px solid black;
+    grid-template-areas: 
+    "a"
+    "b c"
+    "d e"
+    "f g"
+    "h i"
+    "j k"
+    "l m"
+    "n";
+}
+#code{
+    grid-area: a;
+    background-color: lightyellow;
+}
+#des{
+    grid-area: b;
+    background-color: lightyellow;
+}
+#dob{
+    grid-area: c;
+    background-color: lightyellow;
+}
+#name{
+    grid-area: d;
+    background-color: lightyellow;
+}
+#doj{
+    grid-area: e;
+    background-color: lightyellow;
+}
+#age{
+    grid-area: f;
+    background-color: lightyellow;
+}
+#exp{
+    grid-area: g;
+    background-color: lightyellow;
+}
+#gen{
+    grid-area: h;
+    background-color: lightyellow;
+}
+#id1{
+    grid-area: i;
+    background-color: lightyellow;
+}
+#email{
+    grid-area: j;
+    background-color: lightyellow;
+}
+#num{
+    grid-area: k;
+    background-color: lightyellow;
+}
+#loc{
+    grid-area: l;
+    background-color: lightyellow;
+}
+#stat{
+    grid-area: m;
+    background-color: lightyellow;
+}
+#add{
+    grid-area: n;
+    background-color: lightyellow;
+}
+#righttop{
+    display: grid;
+    float: right;
+    height: 400px;
+    width: 750px;
+    border: 3px solid black;
+    grid-template-areas: 
+    "w x"
+    "o p"
+    "q r"
+    "s t"
+    "u v"
+    "y z"
+}
+#head2{
+    background-color: rgb(225, 219, 219);
+    grid-area: w/w/x/x;
+}
+#mon{
+    grid-area: o;
+    background-color: bisque;
+}
+#dat{
+    grid-area: p;
+    background-color: bisque;
+}
+#day{
+    grid-area: q;
+    background-color: bisque;
+}
+#abs{
+    grid-area: r;
+    background-color: bisque;
+}
+#med{
+    grid-area: s;
+    background-color: bisque;
+}
+#pf{
+    grid-area: t;
+    background-color: bisque;
+}
+#con{
+    grid-area: u;
+    background-color: bisque;
+}
+#net{
+    grid-area: v;
+    background-color: bisque;
+}
+#calc{
+    background-color: orange;
+    cursor: pointer;
+}
+#sav{
+    background-color: green;
+    cursor: pointer;
+}
+#clr{
+    background-color: grey;
+    cursor: pointer;
+}
+#up{
+    background-color: blue;
+    cursor: pointer;
+}
+#del{
+    background-color: rgb(202, 66, 66);
+    cursor: pointer;
+}
+#dis{
+    background-color: palevioletred;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+	<div id="container" >
+        <div id="left" class="side">
+            <h3 id="head1">EMPLOYEE DETAILS</h3>
+            <label>EMPLOYEE CODE:<input type="text" id="code" size="25px"></label>
+            <label>DESIGNATION:<input type="text" id="des" size="25px"></label>
+            <label>EMPLOYEE D.O.B:<input type="date" id="dob" size="25px"></label>
+            <label>EMPLOYEE NAME:<input type="text" id="name" size="25px"></label>
+            <label>EMPLOYEE D.O.J:<input type="date" id="doj" size="25px"></label>
+            <label>EMPLOYEE AGE:<input type="number" id="age" size="25px"></label>
+            <label>EXPERIENCE:<input type="number" id="exp" size="25px"></label>
+            <label>GENDER:<input type="text" id="gen" size="25px"></label>
+            <label>PROOF ID:<input type="text" id="id1" size="25px"></label>
+            <label>EMPLOYEE EMAIL:<input type="email" id="email" size="25px"></label>
+            <label>CONTACT:<input type="text" id="num" size="25px"></label>
+            <label>HIRED LOCATION:<input type="text" id="loc" size="25px"></label>
+            <label>EMPLOYEE STATUS:<input type="text" id="stat" size="25px"></label>
+            <label>ADDRESS:<textarea rows="5" cols="40" id="add"></textarea></label>
+        </div>
+        <div id="right" class="side">
+            <div id="righttop">
+                <h3 id="head2">EMPLOYEE SALARY DETAILS:</h3>
+                <label>Month and Year:<input type="month" id="mon" size="10px"></label>
+                <label>Date:<input type="number" id="dat" size="10px"></label>
+                <label>Total Days:<input type="number" id="day" size="10px"></label>
+                <label>Absents:<input type="number" id="abs" size="10px"></label>
+                <label>Medical:<input type="number" id="med" size="10px"></label>
+                <label>PF:<input type="text" id="pf" size="10px"></label>
+                <label>Convence:<input type="text" id="con" size="10px"></label>
+                <label>Net Salary:<input type="text" id="net" size="10px"></label>
+                <button id="calc">Calculate</button>
+                <button id="sav">Save</button>
+                <button id="clr">Clear</button>
+                <button id="up">Update</button>
+                <button id="del">Delete</button>
+                <button id="dis">Display</button>
+            </div>
+            <div id="rightdown">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
