@@ -7,7 +7,7 @@
    
 	<title>PAYROLL</title>
     <style>
-        *{
+*{
     box-sizing: border-box;
 }
 #head1{
@@ -19,78 +19,56 @@
     height: 800px;
     width: 750px;
     border: 3px solid black;
-    grid-template-areas: 
-    "a"
-    "b c"
-    "d e"
-    "f g"
-    "h i"
-    "j k"
-    "l m"
-    "n";
 }
 #code{
-    grid-area: a;
     background-color: lightyellow;
 }
 #des{
-    grid-area: b;
     background-color: lightyellow;
 }
 #dob{
-    grid-area: c;
     background-color: lightyellow;
 }
 #name{
-    grid-area: d;
     background-color: lightyellow;
 }
 #doj{
-    grid-area: e;
     background-color: lightyellow;
 }
 #age{
-    grid-area: f;
     background-color: lightyellow;
 }
 #exp{
-    grid-area: g;
     background-color: lightyellow;
 }
 #gen{
-    grid-area: h;
     background-color: lightyellow;
 }
 #id1{
-    grid-area: i;
     background-color: lightyellow;
 }
 #email{
-    grid-area: j;
     background-color: lightyellow;
 }
 #num{
-    grid-area: k;
     background-color: lightyellow;
 }
 #loc{
-    grid-area: l;
     background-color: lightyellow;
 }
 #stat{
-    grid-area: m;
     background-color: lightyellow;
 }
 #add{
-    grid-area: n;
     background-color: lightyellow;
 }
 #righttop{
     display: grid;
     float: right;
-    height: 400px;
+    height: 398px;
     width: 750px;
     border: 3px solid black;
+    position: relative;
     grid-template-areas: 
     "w x"
     "o p"
@@ -159,12 +137,49 @@
     background-color: palevioletred;
     cursor: pointer;
 }
+#rightdown{
+    position: absolute;
+    display: grid;
+    border: 3px black solid;
+    height: 398px;
+    width: 750px;
+    margin: 400px 755px;
+    grid-template-areas: 
+    "1 2"
+    "3 4"
+    "5 6"
+    "7 8";
+}
+#code1{
+    grid-area: 1;
+}
+#des1{
+    grid-area: 2;
+}
+#dob1{
+    grid-area: 3;
+}
+#name1{
+    grid-area: 4;
+}
+#doj1{
+    grid-area: 5;
+}
+#age1{
+    grid-area: 6;
+}
+#exp1{
+    grid-area: 7;
+}
+#gen1{
+    grid-area: 8;
+}
     </style>
 </head>
 <body>
-	<div id="container" >
+		<div id="container" >
         <div id="left" class="side">
-            <h3 id="head1">EMPLOYEE DETAILS</h3>
+            <h3 id="head1">EMPLOYEE DETAILS:</h3>
             <label>EMPLOYEE CODE:<input type="text" id="code" size="25px"></label>
             <label>DESIGNATION:<input type="text" id="des" size="25px"></label>
             <label>EMPLOYEE D.O.B:<input type="date" id="dob" size="25px"></label>
@@ -199,9 +214,41 @@
                 <button id="dis">Display</button>
             </div>
             <div id="rightdown">
-
+                <p id="code1">EMPLOYEE CODE:</p>
+                <p id="des1">DESIGNATION:</p>
+                <p id="dob1">D.O.B:</p>
+                <p id="name1">NAME:</p>
+                <p id="doj1">D.O.J:</p>
+                <p id="age1">AGE:</p>
+                <p id="exp1">EXPERIENCE:</p>
+                <p id="gen1">GENDER:</p>
+                <p id="id2">PROOF ID:</p>
+                <p id="email1">EMAIL:</p>
+                <p id="num1">CONTACT:</p>
+                <p id="loc1">HIRED LOCATION:</p>
+                <p id="stat1">EMPLOYEE STATUS:</p>
+                <p id="add1">ADDRESS:</p>
+                <p id="net1">NET SALARY:</p>
             </div>
         </div>
     </div>
+    <script>
+    document.getElementById("dis").onclick=function(){
+    document.getElementById("code1").innerHTML+=document.getElementById("code").value;
+    document.getElementById("des1").innerHTML+=document.getElementById("des").value;
+    document.getElementById("dob1").innerHTML+=document.getElementById("dob").value;
+    document.getElementById("name1").innerHTML+=document.getElementById("name").value;
+    document.getElementById("doj1").innerHTML+=document.getElementById("doj").value;
+    document.getElementById("age1").innerHTML+=document.getElementById("age").value;
+    document.getElementById("exp1").innerHTML+=document.getElementById("exp").value;
+    document.getElementById("gen1").innerHTML+=document.getElementById("gen").value;
+    document.getElementById("id2").innerHTML+=document.getElementById("id1").value;
+    document.getElementById("email1").innerHTML+=document.getElementById("email").value;
+    document.getElementById("num1").innerHTML+=document.getElementById("num").value;
+    document.getElementById("loc1").innerHTML+=document.getElementById("loc").value;
+    document.getElementById("stat1").innerHTML+=document.getElementById("stat").value;
+    document.getElementById("add1").innerHTML+=document.getElementById("add").value;
+    document.getElementById("net1").innerHTML+=(((document.getElementById("day").value-document.getElementById("abs").value)+((document.getElementById("med").value)*1))*1000);}
+    </script>
 </body>
 </html>
