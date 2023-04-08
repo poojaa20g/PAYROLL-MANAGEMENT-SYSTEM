@@ -174,12 +174,6 @@
 #gen1{
     grid-area: 8;
 }
-@media all and (min-width: 600px){
-    body{
-        height: 100%;
-        width: 99%;
-    }
-}
     </style>
 </head>
 <body>
@@ -255,6 +249,8 @@
     document.getElementById("stat1").innerHTML+=document.getElementById("stat").value;
     document.getElementById("add1").innerHTML+=document.getElementById("add").value;
     document.getElementById("net1").innerHTML+=(((document.getElementById("day").value-document.getElementById("abs").value)+((document.getElementById("med").value)*1))*1000);}
+    document.getElementById("clr").onclick=function(){
+    location.reload()}
     </script>
 </body>
 </html>
