@@ -249,6 +249,7 @@
     document.getElementById("stat1").innerHTML+=document.getElementById("stat").value;
     document.getElementById("add1").innerHTML+=document.getElementById("add").value;
     document.getElementById("net1").innerHTML+=(((document.getElementById("day").value-document.getElementById("abs").value)+((document.getElementById("med").value)*1))*1000);}
+    document.getElementById("net").value+=(((document.getElementById("day").value-document.getElementById("abs").value)+((document.getElementById("med").value)*1))*1000);
     document.getElementById("clr").onclick=function(){
     location.reload()}
     </script>
