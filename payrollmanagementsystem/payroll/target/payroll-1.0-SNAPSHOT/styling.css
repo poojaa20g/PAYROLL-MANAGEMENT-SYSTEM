@@ -1,0 +1,234 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 09-Apr-2023, 2:10:41 pm
+    Author     : Radhika Swaminathan
+*/
+
+*{
+    box-sizing: border-box;
+}
+#head1{
+    background-color: rgb(225, 219, 219);;
+}
+#left{
+    display: grid;
+    padding: 10px;
+    float:left;
+    height: 800px;
+    width: 49%;
+    border: 3px solid black;
+}
+#code{
+    background-color: lightyellow;
+}
+#des{
+    background-color: lightyellow;
+}
+#dob{
+    background-color: lightyellow;
+}
+#name{
+    background-color: lightyellow;
+}
+#doj{
+    background-color: lightyellow;
+}
+#age{
+    background-color: lightyellow;
+}
+#exp{
+    background-color: lightyellow;
+}
+#gen{
+    background-color: lightyellow;
+}
+#id1{
+    background-color: lightyellow;
+}
+#email{
+    background-color: lightyellow;
+}
+#num{
+    background-color: lightyellow;
+}
+#loc{
+    background-color: lightyellow;
+}
+#stat{
+    background-color: lightyellow;
+}
+#add{
+    background-color: lightyellow;
+    border: 2px solid black;
+}
+#righttop{
+    display: grid;
+    padding: 10px;
+    float: right;
+    height: 398px;
+    width: 49%;
+    border: 3px solid black;
+    position: relative;
+    grid-template-areas: 
+    "w x"
+    "o p"
+    "q r"
+    "s t"
+    "u v"
+    "y z"
+}
+#rightbottom{
+    margin-top: 50px;
+    display: grid;
+    float: right;
+    height: 200px;
+    width: 49%;
+    position: relative;
+    grid-template-areas: 
+    "w x"
+    "o p"
+    "q r"
+    "s t"
+    "u v"
+    "y z"
+}
+
+@media screen and (max-width: 780px) {
+    #left {
+        width: 100%;
+    }
+    #right {
+        float: left;
+        width: 100%;
+    }
+  #righttop {
+    float: left;
+    width: 100%;
+  }
+  #rightbottom {
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    grid-template-areas: 
+    "w x o"
+    "p q"
+  }
+}
+
+.but{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 3px;
+    font-weight: 800;
+}
+
+#head2{
+    background-color: rgb(225, 219, 219);
+    grid-area: w/w/x/x;
+}
+#mon{
+    grid-area: o;
+    background-color: bisque;
+}
+#dat{
+    grid-area: p;
+    background-color: bisque;
+}
+#day{
+    grid-area: q;
+    background-color: bisque;
+}
+#abs{
+    grid-area: r;
+    background-color: bisque;
+}
+#med{
+    grid-area: s;
+    background-color: bisque;
+}
+#pf{
+    grid-area: t;
+    background-color: bisque;
+}
+#con{
+    grid-area: u;
+    background-color: bisque;
+}
+#net{
+    grid-area: v;
+    background-color: bisque;
+}
+#calc{
+    background-color: orange;
+    cursor: pointer;
+}
+#sav{
+    background-color: green;
+    cursor: pointer;
+}
+#clr{
+    background-color: grey;
+    cursor: pointer;
+}
+#up{
+    background-color: #257CBE;
+    cursor: pointer;
+}
+#del{
+    background-color: rgb(202, 66, 66);
+    cursor: pointer;
+}
+#dis{
+    background-color: palevioletred;
+    cursor: pointer;
+}
+#details{
+    position: absolute;
+    display: grid;
+    border: 3px black solid;
+    border-radius: 5px;
+    width: 60%;
+    margin: 20px 20%;
+    margin-bottom: 100px;
+    padding: 10px;
+    grid-template-areas: 
+    "1 2"
+    "3 4"
+    "5 6"
+    "7 8";
+}
+
+@media screen and (max-width: 700px) {
+  #details {
+    grid-template-areas: none;
+  }
+}
+
+#code1{
+    grid-area: 1;
+}
+#des1{
+    grid-area: 2;
+}
+#dob1{
+    grid-area: 3;
+}
+#name1{
+    grid-area: 4;
+}
+#doj1{
+    grid-area: 5;
+}
+#age1{
+    grid-area: 6;
+}
+#exp1{
+    grid-area: 7;
+}
+#gen1{
+    grid-area: 8;
+}

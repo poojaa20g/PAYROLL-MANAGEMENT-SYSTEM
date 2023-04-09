@@ -1,0 +1,50 @@
+mysql> create database payroll;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use payroll;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table employee(empcode varchar(6) primary key, designation varchar(40), dob date, name varchar(50), doj date, age int(2), experience varchar(30), gender varchar(1), proofid varchar(12), email varchar(20), contact varchar(10), hiredloc varchar(20), status varchar(20), address varchar(70));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> desc employee;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| empcode     | varchar(6)  | NO   | PRI | NULL    |       |
+| designation | varchar(40) | YES  |     | NULL    |       |
+| dob         | date        | YES  |     | NULL    |       |
+| name        | varchar(50) | YES  |     | NULL    |       |
+| doj         | date        | YES  |     | NULL    |       |
+| age         | int         | YES  |     | NULL    |       |
+| experience  | varchar(30) | YES  |     | NULL    |       |
+| gender      | varchar(1)  | YES  |     | NULL    |       |
+| proofid     | varchar(12) | YES  |     | NULL    |       |
+| email       | varchar(20) | YES  |     | NULL    |       |
+| contact     | varchar(10) | YES  |     | NULL    |       |
+| hiredloc    | varchar(20) | YES  |     | NULL    |       |
+| status      | varchar(20) | YES  |     | NULL    |       |
+| address     | varchar(70) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+14 rows in set (0.00 sec)
+
+mysql> create table salary(empcode varchar(6), month_year varchar(30),date int(2), totdays int(2), absence int(2), medical int(2), pf float(4,2), conveyance int(5), net float(10,2), foreign key(empcode) references employee(empcode));
+Query OK, 0 rows affected, 7 warnings (0.05 sec)
+
+mysql> desc salary;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| empcode    | varchar(6)  | YES  | MUL | NULL    |       |
+| month_year | varchar(30) | YES  |     | NULL    |       |
+| date       | int         | YES  |     | NULL    |       |
+| totdays    | int         | YES  |     | NULL    |       |
+| absence    | int         | YES  |     | NULL    |       |
+| medical    | int         | YES  |     | NULL    |       |
+| pf         | float(4,2)  | YES  |     | NULL    |       |
+| conveyance | int         | YES  |     | NULL    |       |
+| net        | float(10,2) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
